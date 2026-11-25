@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071321">
+  <meta name="description" content="VisitFallback — a local, synthetic Relate by Neo4j care-handoff proof. Three confirmations do not always mean a viable plan.">
+  <title>VisitFallback — Confirmed ≠ Covered</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body data-coverage="loading" data-current-phase="A">
+  <svg xmlns="http://www.w3.org/2000/svg" class="icons" aria-hidden="true">
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 8.3c0 4.2-8.8 10.1-8.8 10.1S3.2 12.5 3.2 8.3a4.6 4.6 0 0 1 8.8-1.8 4.6 4.6 0 0 1 8.8 1.8Z"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="m3.5 10 8.5-7 8.5 7v10H14v-6H10v6H3.5Z"/></symbol>
+    <symbol id="i-clinic" viewBox="0 0 24 24"><path d="M6 21V4h12v17M3 21h18M9 9h6M12 6v6M9 21v-5h6v5"/></symbol>
+    <symbol id="i-car" viewBox="0 0 24 24"><path d="M5.1 15.7 6.8 9h10.4l1.7 6.7M4.5 15.7h15v4h-15zM7.5 20v2m9-2v2M3.5 9h2m13 0h2M7.5 18h.1m9 0h.1"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4.5 4.5L19 7"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="i-branch" viewBox="0 0 24 24"><circle cx="6" cy="5" r="2"/><circle cx="18" cy="12" r="2"/><circle cx="6" cy="19" r="2"/><path d="M8 5c8 0 8 7 8 7s0 7-8 7"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2.5 20 6v6.3c0 5.2-3.5 8.1-8 9.2-4.5-1.1-8-4-8-9.2V6Z"/><path d="m8.4 12 2.3 2.3 4.9-5"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="m12 3 10 18H2Z"/><path d="M12 9v5m0 3v.1"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 10v6m0-9v.1"/></symbol>
+  </svg>
+
+  <div class="ambient ambient-1" aria-hidden="true"></div>
+  <div class="ambient ambient-2" aria-hidden="true"></div>
+
+  <div class="shell">
+    <header class="topbar">
+      <div class="identity">
+        <div class="logo" aria-hidden="true"><svg class="symbol"><use href="#i-heart"/></svg><span class="logo-dot"></span></div>
+        <div class="identity-text"><strong>VisitFallback<span class="brand-period">.</span></strong><span>CARE HANDOFF PROOF</span></div>
+      </div>
+      <div class="nav-actions">
+        <span class="synthetic-badge"><span class="tiny-ring"></span> SYNTHETIC DATA</span>
+        <span id="connection" class="connected"><span class="green-dot"></span> Connecting to Relate…</span>
+        <button type="button" id="evidenceJump" class="header-action">Explore proof <svg class="symbol"><use href="#i-arrow"/></svg></button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-text">
+          <div class="capsule"><span class="capsule-line"></span> ONE VISIT. THREE COMMITMENTS.</div>
+          <h1>Everyone said <em>yes.</em><br><span>The plan still fails.</span></h1>
+          <p class="hero-subtitle">A ride there. Support inside. A ride home. <strong>One hidden conflict.</strong></p>
+          <div class="hero-tags"><span><svg class="symbol"><use href="#i-clock"/></svg> Tomorrow · 9:15 AM</span><span><svg class="symbol"><use href="#i-clinic"/></svg> Clinic appointment</span><span><svg class="symbol"><use href="#i-branch"/></svg> Live Relate graph</span></div>
+          <button type="button" class="start-button" id="demoJump">See what happens <svg class="symbol"><use href="#i-arrow"/></svg></button>
+        </div>
+        <div class="scene-shell">
+          <div class="scene-top"><span>THE CARE JOURNEY</span><span class="scene-annotation">HOME → CLINIC → HOME</span></div>
+          <div id="scene" class="scene" aria-label="Stylized 3D view of a fictional home to clinic to home care journey">
+            <div class="scene-aura"></div>
+            <div class="island">
+              <div class="island-underside"></div>
+              <div class="route-glow"></div>
+              <svg class="ground-route" viewBox="0 0 700 300" aria-hidden="true" preserveAspectRatio="none"><path class="route-base" d="M115 170 C215 130 250 230 360 170 S540 118 606 170"/><path class="route-active" d="M115 170 C215 130 250 230 360 170 S540 118 606 170"/></svg>
+              <div class="stop stop-home"><div class="mini-building building-home"><svg class="symbol"><use href="#i-home"/></svg></div><span>HOME</span></div>
+              <div class="stop stop-clinic"><div class="mini-building building-clinic"><svg class="symbol"><use href="#i-clinic"/></svg></div><span>CLINIC</span></div>
+              <div class="stop stop-return"><div class="mini-building building-return"><svg class="symbol"><use href="#i-home"/></svg></div><span>HOME AGAIN</span></div>
+              <div class="journey-dot dot-1"></div><div class="journey-dot dot-2"></div><div class="journey-dot dot-3"></div>
+            </div>
+            <div class="scene-conflict" id="sceneConflict" aria-hidden="true"><svg class="symbol"><use href="#i-alert"/></svg><span>RETURN AT RISK</span></div>
+          </div>
+          <div class="scene-footer"><span><span class="live-pulse"></span> RELATE-POWERED EXPLANATION</span><span>No real people or medical data</span></div>
+        </div>
+      </section>
+
+      <section id="experience" class="experience">
+        <div class="section-kicker"><span class="num">01</span> LIVE SCENARIO <span class="kicker-rule"></span> RELATE</div>
+        <div class="section-heading"><div><h2>One visit. Five outcomes.</h2></div><div class="legend-status"><span class="green-dot"></span> Live Relate</div></div>
+        <div class="phase-selector" role="group" aria-label="Select the synthetic demonstration phase">
+          <button type="button" data-phase="A" aria-label="Original plan, all needs covered" class="phase active"><span class="phase-num">01 <span>A</span></span><strong>Original</strong></button>
+          <button type="button" data-phase="B" aria-label="Original helper cancels" class="phase"><span class="phase-num">02 <span>B</span></span><strong>Cancelled</strong></button>
+          <button type="button" data-phase="C" aria-label="Two needs covered, return unconfirmed" class="phase"><span class="phase-num">03 <span>C</span></span><strong>Partial</strong></button>
+          <button type="button" data-phase="D" aria-label="All three confirmed and executable" class="phase"><span class="phase-num">04 <span>D</span></span><strong>Covered</strong></button>
+          <button type="button" data-phase="E" aria-label="All three confirmed, but double-booked" class="phase critical"><span class="phase-num">05 <span>E</span></span><strong>Conflict</strong></button>
+        </div>
+      </section>
+
+      <section class="decision-layout">
+        <div id="decisionCard" class="decision-card" aria-live="polite">
+          <div class="decision-shimmer"></div>
+          <div class="decision-heading"><span class="subcaps">PLAN STATUS</span><span class="data-tag">SIMULATED</span></div>
+          <div class="decision-main"><div class="decision-icon"><svg class="symbol icon-ok"><use href="#i-shield"/></svg><svg class="symbol icon-danger"><use href="#i-alert"/></svg></div><div class="decision-copy"><p id="verdict" class="verdict">VERIFYING THE PLAN</p><p id="phaseNote" class="decision-sub">Checking commitments…</p></div></div>
+          <div class="decision-numbers"><div><strong id="confirmation">— / 3</strong><span>CONFIRMED</span></div><div class="vs-line"></div><div><strong id="count">— / 3</strong><span>EXECUTABLE</span></div><div class="decision-hook" id="decisionHook">The difference is what matters.</div></div>
+          <div id="error" class="error" role="alert" hidden></div>
+        </div>
+        <div class="why-card"><div class="card-top"><span class="subcaps">WHY?</span><svg class="symbol"><use href="#i-alert"/></svg></div><h3 id="whyTitle">What changed?</h3><div id="reason" class="why-copy">Checking the plan…</div><div id="conflictStrip" class="conflict-strip" hidden><svg class="symbol"><use href="#i-clock"/></svg><div><strong>Confirmed ≠ Available</strong><span>The return overlaps another commitment.</span></div></div></div>
+      </section>
+
+      <section id="journeySection" class="journey-section">
+        <div class="section-kicker"><span class="num">02</span> CARE CHAIN</div>
+        <div class="section-heading"><div><h2>Every link matters.</h2></div><span class="section-side-note">3 ESSENTIAL STEPS</span></div>
+        <div class="journey-rail" aria-hidden="true"><div class="rail-line"></div><span class="rail-stop"><svg class="symbol"><use href="#i-home"/></svg></span><span class="rail-stop"><svg class="symbol"><use href="#i-clinic"/></svg></span><span class="rail-stop"><svg class="symbol"><use href="#i-home"/></svg></span></div>
+        <div id="needs" class="needs"><div class="need placeholder">Waiting for verified graph data…</div></div>
+      </section>
+
+      <section id="timelineSection" class="timeline-section">
+        <div class="section-kicker"><span class="num">03</span> TIMELINE</div>
+        <div class="timeline-grid"><div class="timeline-story"><h2>The 15-minute conflict.</h2><div class="time-fact"><span class="time-fact-label">RETURN JOURNEY</span><strong>10:45–11:30</strong></div><div class="time-fact busy-time"><span class="time-fact-label">OTHER COMMITMENT</span><strong id="otherTime">12:00–12:30</strong></div><p id="timelineExplanation" class="timeline-explanation">No scheduling collision in the current plan.</p></div>
+          <div class="timeline-card"><div class="timeline-card-head"><span class="subcaps">CELINE’S SCHEDULE</span><span class="timeline-legend"><i class="lg-trip"></i> Return <i class="lg-busy"></i> Other commitment</span></div>
+            <div class="schedule"><div class="hour-labels"><span>10:30</span><span>11:00</span><span>11:30</span><span>12:00</span><span>12:30</span></div><div class="grid-lines"><span></span><span></span><span></span><span></span><span></span></div>
+              <div class="timeline-track"><div class="track-label"><svg class="symbol"><use href="#i-car"/></svg><span>Confirmed return</span></div><div class="track-space"><div class="timebar return-bar"><span>10:45–11:30</span></div></div></div>
+              <div class="timeline-track"><div class="track-label"><svg class="symbol"><use href="#i-clock"/></svg><span>Other booking</span></div><div class="track-space"><div id="busyBar" class="timebar other-bar"><span id="busyBarLabel">12:00–12:30</span></div></div></div>
+              <div id="overlapMarker" class="overlap-marker" hidden><span>15 MIN OVERLAP</span></div>
+            </div>
+            <div id="timelineVerdict" class="timeline-verdict"><svg class="symbol"><use href="#i-check"/></svg><span>No conflict</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="graphSection" class="graph-section">
+        <div class="section-kicker"><span class="num">04</span> RELATE GRAPH</div>
+        <div class="section-heading"><div><h2>Find the breaking link.</h2></div><span class="relate-pill"><span class="green-dot"></span> LIVE CYPHER</span></div>
+        <div class="graph-surface"><div class="graph-meta"><span>VISIT → NEED → OFFER → PERSON → COMMITMENT</span><span id="graphHint">RELATIONSHIP TRACE</span></div><div id="graph" class="graph" aria-live="polite"></div><div class="graph-footer"><span><i class="lg-good"></i> Compatible</span><span><i class="lg-bad"></i> Conflict</span><span><i class="lg-neutral"></i> Relate link</span></div></div>
+      </section>
+
+      <section id="evidence" class="evidence-section"><div class="evidence-head"><div><div class="section-kicker"><span class="num">05</span> EVIDENCE</div><h2>Verified. Not assumed.</h2></div><div class="proof-summary"><span><svg class="symbol"><use href="#i-shield"/></svg> Independent checks</span></div></div><div class="proof-metrics"><div><span>Relate</span><strong id="relateProof">…</strong></div><div><span>Oracle</span><strong id="oracleProof">…</strong></div><div><span>Expected state</span><strong id="expected">…</strong></div></div><details class="technical-details"><summary><span><svg class="symbol"><use href="#i-branch"/></svg> View Cypher & methodology</span><span class="details-plus">+</span></summary><div class="tech-body"><pre id="cypher">Loading Cypher queries…</pre><p>Every phase button mutates the same Relate graph, then rereads the relationships via Cypher. <strong>It does not send messages to real helpers</strong>, change a calendar, or confirm a real medical visit. The independent oracle checks synthetic feasibility; it is not clinical validation.</p></div></details></section>
+    </main>
+    <footer class="footer"><div class="identity footer-brand"><div class="logo"><svg class="symbol"><use href="#i-heart"/></svg></div><div class="identity-text"><strong>VisitFallback.</strong><span>CONFIRMED ≠ COVERED</span></div></div><div>Synthetic prototype · Relate 1.0.1 · Not medical advice.</div></footer>
+  </div>
+  <script src="/app.js" defer></script>
+</body>
+</html>

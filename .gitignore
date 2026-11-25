@@ -1,0 +1,57 @@
+# VisitFallback — Python + embedded Relate + Plesk
+# Keep the published, inspectable synthetic example: data/demo.rl
+
+# Python caches / tools
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+
+# Local Python environments
+.venv/
+venv/
+env/
+
+# Environment secrets and local editor settings
+.env
+.env.*
+!.env.example
+*.local
+.idea/
+.vscode/
+
+# Runtime output, temporary stores, local reports
+/build/
+/runtime/
+/tmp/
+/temp/
+/logs/
+*.log
+*.tmp
+*.bak
+*.swp
+.DS_Store
+Thumbs.db
+
+# Relate single-file databases: never publish session or test stores.
+# The ONLY intended Relate database in Git is the synthetic demo below.
+*.rl
+!data/demo.rl
+*.rl-wal
+*.rl-shm
+*.rl-journal
+*.rl.lock
+
+# Raw video/audio captures should be delivered separately, not committed.
+/media/
+/recordings/
+/captures/
+
+# Local archives
+*.zip

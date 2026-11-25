@@ -1,0 +1,1536 @@
+{
+  "data_kind": "SYNTHETIC_ONLY",
+  "scenarios": [
+    {
+      "id": "original_covered",
+      "title": "Tomorrow 09:30 follow-up - SYNTHETIC",
+      "needs": [
+        {
+          "id": "OUT",
+          "slot": "outbound",
+          "seq": 0,
+          "start": 510,
+          "end": 550,
+          "origin": "HOME",
+          "destination": "CLINIC",
+          "capability": "DRIVE"
+        },
+        {
+          "id": "ESC",
+          "slot": "escort",
+          "seq": 1,
+          "start": 555,
+          "end": 630,
+          "origin": "CLINIC",
+          "destination": "CLINIC",
+          "capability": "ESCORT"
+        },
+        {
+          "id": "RET",
+          "slot": "return",
+          "seq": 2,
+          "start": 645,
+          "end": 690,
+          "origin": "CLINIC",
+          "destination": "HOME",
+          "capability": "DRIVE"
+        }
+      ],
+      "people": [
+        {
+          "id": "SOF",
+          "name": "Sofia",
+          "capabilities": [
+            "DRIVE",
+            "ESCORT"
+          ],
+          "availability": [
+            [
+              480,
+              720
+            ]
+          ],
+          "busy": []
+        },
+        {
+          "id": "OMA",
+          "name": "Omar",
+          "capabilities": [
+            "DRIVE"
+          ],
+          "availability": [
+            [
+              480,
+              600
+            ],
+            [
+              630,
+              720
+            ]
+          ],
+          "busy": []
+        },
+        {
+          "id": "LIN",
+          "name": "Lina",
+          "capabilities": [
+            "ESCORT"
+          ],
+          "availability": [
+            [
+              540,
+              650
+            ]
+          ],
+          "busy": []
+        },
+        {
+          "id": "CEL",
+          "name": "Celine",
+          "capabilities": [
+            "DRIVE"
+          ],
+          "availability": [
+            [
+              630,
+              720
+            ]
+          ],
+          "busy": []
+        }
+      ],
+      "offers": [
+        {
+          "id": "SOUT",
+          "person": "SOF",
+          "need": "OUT",
+          "state": "confirmed"
+        },
+        {
+          "id": "SESC",
+          "person": "SOF",
+          "need": "ESC",
+          "state": "confirmed"
+        },
+        {
+          "id": "SRET",
+          "person": "SOF",
+          "need": "RET",
+          "state": "confirmed"
+        },
+        {
+          "id": "OOUT",
+          "person": "OMA",
+          "need": "OUT",
+          "state": "proposed"
+        },
+        {
+          "id": "LESC",
+          "person": "LIN",
+          "need": "ESC",
+          "state": "proposed"
+        },
+        {
+          "id": "CRET",
+          "person": "CEL",
+          "need": "RET",
+          "state": "proposed"
+        }
+      ],
+      "expected_covered": true,
+      "purpose": "All obligations confirmed by Sofia; no temporal conflicts."
+    },
+    {
+      "id": "cancelled",
+      "title": "Tomorrow 09:30 follow-up - SYNTHETIC",
+      "needs": [
+        {
+          "id": "OUT",
+          "slot": "outbound",
+          "seq": 0,
+          "start": 510,
+          "end": 550,
+          "origin": "HOME",
+          "destination": "CLINIC",
+          "capability": "DRIVE"
+        },
+        {
+          "id": "ESC",
+          "slot": "escort",
+          "seq": 1,
+          "start": 555,
+          "end": 630,
+          "origin": "CLINIC",
+          "destination": "CLINIC",
+          "capability": "ESCORT"
+        },
+        {
+          "id": "RET",
+          "slot": "return",
+          "seq": 2,
+          "start": 645,
+          "end": 690,
+          "origin": "CLINIC",
+          "destination": "HOME",
+          "capability": "DRIVE"
+        }
+      ],
+      "people": [
+        {
+          "id": "SOF",
+          "name": "Sofia",
+          "capabilities": [
+            "DRIVE",
+            "ESCORT"
+          ],
+          "availability": [
+            [
+              480,
+              720
+            ]
+          ],
+          "busy": []
+        },
+        {
+          "id": "OMA",
+          "name": "Omar",
+          "capabilities": [
+            "DRIVE"
+          ],
+          "availability": [
+            [
+              480,
+              600
+            ],
+            [
+              630,
+              720
+            ]
+          ],
+          "busy": []
+        },
+        {
+          "id": "LIN",
+          "name": "Lina",
+          "capabilities": [
+            "ESCORT"
+          ],
+          "availability": [
+            [
+              540,
+              650
+            ]
+          ],
+          "busy": []
+        },
+        {
+          "id": "CEL",
+          "name": "Celine",
+          "capabilities": [
+            "DRIVE"
+          ],
+          "availability": [
+            [
+              630,
+              720
+            ]
+          ],
+          "busy": []
+        }
+      ],
+      "offers": [
+        {
+          "id": "SOUT",
+          "person": "SOF",
+          "need": "OUT",
+          "state": "withdrawn"
+        },
+        {
+          "id": "SESC",
+          "person": "SOF",
+          "need": "ESC",
+          "state": "withdrawn"
+        },
+        {
+          "id": "SRET",
+          "person": "SOF",
+          "need": "RET",
+          "state": "withdrawn"
+        },
+        {
+          "id": "OOUT",
+          "person": "OMA",
+          "need": "OUT",
+          "state": "proposed"
+        },
+        {
+          "id": "LESC",
+          "person": "LIN",
+          "need": "ESC",
+          "state": "proposed"
+        },
+        {
+          "id": "CRET",
+          "person": "CEL",
+          "need": "RET",
+          "state": "proposed"
+        }
+      ],
+      "expected_covered": false,
+      "purpose": "All Sofia commitments withdrawn; offers remain proposed."
+    },
+    {
+      "id": "partial_trip",
+      "title": "Tomorrow 09:30 follow-up - SYNTHETIC",
+      "needs": [
+        {
+          "id": "OUT",
+          "slot": "outbound",
+          "seq": 0,
+          "start": 510,
+          "end": 550,
+          "origin": "HOME",
+          "destination": "CLINIC",
+          "capability": "DRIVE"
+        },
+        {
+          "id": "ESC",
+          "slot": "escort",
+          "seq": 1,
+          "start": 555,
+          "end": 630,
+          "origin": "CLINIC",
+          "destination": "CLINIC",
+          "capability": "ESCORT"
+        },
+        {
+          "id": "RET",
+          "slot": "return",
+          "seq": 2,
+          "start": 645,
+          "end": 690,
+          "origin": "CLINIC",
+          "destination": "HOME",
+          "capability": "DRIVE"
+        }
+      ],
+      "people": [
+        {
+          "id": "SOF",
+          "name": "Sofia",
+          "capabilities": [
+            "DRIVE",
+            "ESCORT"
+          ],
+          "availability": [
+            [
+              480,
+              720
+            ]
+          ],
+          "busy": []
+        },
+        {
+          "id": "OMA",
+          "name": "Omar",
+          "capabilities": [
+            "DRIVE"
+          ],
+          "availability": [
+            [
+              480,
+              600
+            ],
+            [
+              630,
+              720
+            ]
+          ],
+          "busy": []
+        },
+        {
+          "id": "LIN",
+          "name": "Lina",
+          "capabilities": [
+            "ESCORT"
+          ],
+          "availability": [
+            [
+              540,
+              650
+            ]
+          ],
+          "busy": []
+        },
+        {
+          "id": "CEL",
+          "name": "Celine",
+          "capabilities": [
+            "DRIVE"
+          ],
+          "availability": [
+            [
+              630,
+              720
+            ]
+          ],
+          "busy": []
+        }
+      ],
+      "offers": [
+        {
+          "id": "SOUT",
+          "person": "SOF",
+          "need": "OUT",
+          "state": "withdrawn"
+        },
+        {
+          "id": "SESC",
+          "person": "SOF",
+          "need": "ESC",
+          "state": "withdrawn"
+        },
+        {
+          "id": "SRET",
+          "person": "SOF",
+          "need": "RET",
+          "state": "withdrawn"
+        },
+        {
+          "id": "OOUT",
+          "person": "OMA",
+          "need": "OUT",
+          "state": "confirmed"
+        },
+        {
+          "id": "LESC",
+          "person": "LIN",
+          "need": "ESC",
+          "state": "confirmed"
+        },
+        {
+          "id": "CRET",
+          "person": "CEL",
+          "need": "RET",
+          "state": "proposed"
+        }
+      ],
+      "expected_covered": false,
+      "purpose": "Outbound and escort confirmed; return not confirmed."
+    },
+    {
+      "id": "rescue_complete",
+      "title": "Tomorrow 09:30 follow-up - SYNTHETIC",
+      "needs": [
+        {
+          "id": "OUT",
+          "slot": "outbound",
+          "seq": 0,
+          "start": 510,
+          "end": 550,
+          "origin": "HOME",
+          "destination": "CLINIC",
+          "capability": "DRIVE"
+        },
+        {
+          "id": "ESC",
+          "slot": "escort",
+          "seq": 1,
+          "start": 555,
+          "end": 630,
+          "origin": "CLINIC",
+          "destination": "CLINIC",
+          "capability": "ESCORT"
+        },
+        {
+          "id": "RET",
+          "slot": "return",
+          "seq": 2,
+          "start": 645,
+          "end": 690,
+          "origin": "CLINIC",
+          "destination": "HOME",
+          "capability": "DRIVE"
+        }
+      ],
+      "people": [
+        {
+          "id": "SOF",
+          "name": "Sofia",
+          "capabilities": [
+            "DRIVE",
+            "ESCORT"
+          ],
+          "availability": [
+            [
+              480,
+              720
+            ]
+          ],
+          "busy": []
+        },
+        {
+          "id": "OMA",
+          "name": "Omar",
+          "capabilities": [
+            "DRIVE"
+          ],
+          "availability": [
+            [
+              480,
+              600
+            ],
+            [
+              630,
+              720
+            ]
+          ],
+          "busy": []
+        },
+        {
+          "id": "LIN",
+          "name": "Lina",
+          "capabilities": [
+            "ESCORT"
+          ],
+          "availability": [
+            [
+              540,
+              650
+            ]
+          ],
+          "busy": []
+        },
+        {
+          "id": "CEL",
+          "name": "Celine",
+          "capabilities": [
+            "DRIVE"
+          ],
+          "availability": [
+            [
+              630,
+              720
+            ]
+          ],
+          "busy": []
+        }
+      ],
+      "offers": [
+        {
+          "id": "SOUT",
+          "person": "SOF",
+          "need": "OUT",
+          "state": "withdrawn"
+        },
+        {
+          "id": "SESC",
+          "person": "SOF",
+          "need": "ESC",
+          "state": "withdrawn"
+        },
+        {
+          "id": "SRET",
+          "person": "SOF",
+          "need": "RET",
+          "state": "withdrawn"
+        },
+        {
+          "id": "OOUT",
+          "person": "OMA",
+          "need": "OUT",
+          "state": "confirmed"
+        },
+        {
+          "id": "LESC",
+          "person": "LIN",
+          "need": "ESC",
+          "state": "confirmed"
+        },
+        {
+          "id": "CRET",
+          "person": "CEL",
+          "need": "RET",
+          "state": "confirmed"
+        }
+      ],
+      "expected_covered": true,
+      "purpose": "Three compatible, independently confirmed replacement commitments."
+    },
+    {
+      "id": "busy_driver",
+      "title": "Tomorrow 09:30 follow-up - SYNTHETIC",
+      "needs": [
+        {
+          "id": "OUT",
+          "slot": "outbound",
+          "seq": 0,
+          "start": 510,
+          "end": 550,
+          "origin": "HOME",
+          "destination": "CLINIC",
+          "capability": "DRIVE"
+        },
+        {
+          "id": "ESC",
+          "slot": "escort",
+          "seq": 1,
+          "start": 555,
+          "end": 630,
+          "origin": "CLINIC",
+          "destination": "CLINIC",
+          "capability": "ESCORT"
+        },
+        {
+          "id": "RET",
+          "slot": "return",
+          "seq": 2,
+          "start": 645,
+          "end": 690,
+          "origin": "CLINIC",
+          "destination": "HOME",
+          "capability": "DRIVE"
+        }
+      ],
+      "people": [
+        {
+          "id": "SOF",
+          "name": "Sofia",
+          "capabilities": [
+            "DRIVE",
+            "ESCORT"
+          ],
+          "availability": [
+            [
+              480,
+              720
+            ]
+          ],
+          "busy": []
+        },
+        {
+          "id": "OMA",
+          "name": "Omar",
+          "capabilities": [
+            "DRIVE"
+          ],
+          "availability": [
+            [
+              480,
+              600
+            ],
+            [
+              630,
+              720
+            ]
+          ],
+          "busy": [
+            [
+              530,
+              545
+            ]
+          ]
+        },
+        {
+          "id": "LIN",
+          "name": "Lina",
+          "capabilities": [
+            "ESCORT"
+          ],
+          "availability": [
+            [
+              540,
+              650
+            ]
+          ],
+          "busy": []
+        },
+        {
+          "id": "CEL",
+          "name": "Celine",
+          "capabilities": [
+            "DRIVE"
+          ],
+          "availability": [
+            [
+              630,
+              720
+            ]
+          ],
+          "busy": []
+        }
+      ],
+      "offers": [
+        {
+          "id": "SOUT",
+          "person": "SOF",
+          "need": "OUT",
+          "state": "withdrawn"
+        },
+        {
+          "id": "SESC",
+          "person": "SOF",
+          "need": "ESC",
+          "state": "withdrawn"
+        },
+        {
+          "id": "SRET",
+          "person": "SOF",
+          "need": "RET",
+          "state": "withdrawn"
+        },
+        {
+          "id": "OOUT",
+          "person": "OMA",
+          "need": "OUT",
+          "state": "confirmed"
+        },
+        {
+          "id": "LESC",
+          "person": "LIN",
+          "need": "ESC",
+          "state": "confirmed"
+        },
+        {
+          "id": "CRET",
+          "person": "CEL",
+          "need": "RET",
+          "state": "confirmed"
+        }
+      ],
+      "expected_covered": false,
+      "purpose": "Omar accepted outbound but has an overlapping external commitment."
+    },
+    {
+      "id": "capability_missing",
+      "title": "Tomorrow 09:30 follow-up - SYNTHETIC",
+      "needs": [
+        {
+          "id": "OUT",
+          "slot": "outbound",
+          "seq": 0,
+          "start": 510,
+          "end": 550,
+          "origin": "HOME",
+          "destination": "CLINIC",
+          "capability": "DRIVE"
+        },
+        {
+          "id": "ESC",
+          "slot": "escort",
+          "seq": 1,
+          "start": 555,
+          "end": 630,
+          "origin": "CLINIC",
+          "destination": "CLINIC",
+          "capability": "ESCORT"
+        },
+        {
+          "id": "RET",
+          "slot": "return",
+          "seq": 2,
+          "start": 645,
+          "end": 690,
+          "origin": "CLINIC",
+          "destination": "HOME",
+          "capability": "DRIVE"
+        }
+      ],
+      "people": [
+        {
+          "id": "SOF",
+          "name": "Sofia",
+          "capabilities": [
+            "DRIVE",
+            "ESCORT"
+          ],
+          "availability": [
+            [
+              480,
+              720
+            ]
+          ],
+          "busy": []
+        },
+        {
+          "id": "OMA",
+          "name": "Omar",
+          "capabilities": [
+            "DRIVE"
+          ],
+          "availability": [
+            [
+              480,
+              600
+            ],
+            [
+              630,
+              720
+            ]
+          ],
+          "busy": []
+        },
+        {
+          "id": "LIN",
+          "name": "Lina",
+          "capabilities": [
+            "ESCORT"
+          ],
+          "availability": [
+            [
+              540,
+              650
+            ]
+          ],
+          "busy": []
+        },
+        {
+          "id": "CEL",
+          "name": "Celine",
+          "capabilities": [
+            "ESCORT"
+          ],
+          "availability": [
+            [
+              630,
+              720
+            ]
+          ],
+          "busy": []
+        }
+      ],
+      "offers": [
+        {
+          "id": "SOUT",
+          "person": "SOF",
+          "need": "OUT",
+          "state": "withdrawn"
+        },
+        {
+          "id": "SESC",
+          "person": "SOF",
+          "need": "ESC",
+          "state": "withdrawn"
+        },
+        {
+          "id": "SRET",
+          "person": "SOF",
+          "need": "RET",
+          "state": "withdrawn"
+        },
+        {
+          "id": "OOUT",
+          "person": "OMA",
+          "need": "OUT",
+          "state": "confirmed"
+        },
+        {
+          "id": "LESC",
+          "person": "LIN",
+          "need": "ESC",
+          "state": "confirmed"
+        },
+        {
+          "id": "CRET",
+          "person": "CEL",
+          "need": "RET",
+          "state": "confirmed"
+        }
+      ],
+      "expected_covered": false,
+      "purpose": "Return driver is confirmed but lacks driving capability."
+    },
+    {
+      "id": "late_handoff",
+      "title": "Tomorrow 09:30 follow-up - SYNTHETIC",
+      "needs": [
+        {
+          "id": "OUT",
+          "slot": "outbound",
+          "seq": 0,
+          "start": 510,
+          "end": 565,
+          "origin": "HOME",
+          "destination": "CLINIC",
+          "capability": "DRIVE"
+        },
+        {
+          "id": "ESC",
+          "slot": "escort",
+          "seq": 1,
+          "start": 555,
+          "end": 630,
+          "origin": "CLINIC",
+          "destination": "CLINIC",
+          "capability": "ESCORT"
+        },
+        {
+          "id": "RET",
+          "slot": "return",
+          "seq": 2,
+          "start": 645,
+          "end": 690,
+          "origin": "CLINIC",
+          "destination": "HOME",
+          "capability": "DRIVE"
+        }
+      ],
+      "people": [
+        {
+          "id": "SOF",
+          "name": "Sofia",
+          "capabilities": [
+            "DRIVE",
+            "ESCORT"
+          ],
+          "availability": [
+            [
+              480,
+              720
+            ]
+          ],
+          "busy": []
+        },
+        {
+          "id": "OMA",
+          "name": "Omar",
+          "capabilities": [
+            "DRIVE"
+          ],
+          "availability": [
+            [
+              480,
+              600
+            ],
+            [
+              630,
+              720
+            ]
+          ],
+          "busy": []
+        },
+        {
+          "id": "LIN",
+          "name": "Lina",
+          "capabilities": [
+            "ESCORT"
+          ],
+          "availability": [
+            [
+              540,
+              650
+            ]
+          ],
+          "busy": []
+        },
+        {
+          "id": "CEL",
+          "name": "Celine",
+          "capabilities": [
+            "DRIVE"
+          ],
+          "availability": [
+            [
+              630,
+              720
+            ]
+          ],
+          "busy": []
+        }
+      ],
+      "offers": [
+        {
+          "id": "SOUT",
+          "person": "SOF",
+          "need": "OUT",
+          "state": "withdrawn"
+        },
+        {
+          "id": "SESC",
+          "person": "SOF",
+          "need": "ESC",
+          "state": "withdrawn"
+        },
+        {
+          "id": "SRET",
+          "person": "SOF",
+          "need": "RET",
+          "state": "withdrawn"
+        },
+        {
+          "id": "OOUT",
+          "person": "OMA",
+          "need": "OUT",
+          "state": "confirmed"
+        },
+        {
+          "id": "LESC",
+          "person": "LIN",
+          "need": "ESC",
+          "state": "confirmed"
+        },
+        {
+          "id": "CRET",
+          "person": "CEL",
+          "need": "RET",
+          "state": "confirmed"
+        }
+      ],
+      "expected_covered": false,
+      "purpose": "Outbound arrives too late for the confirmed escort start."
+    },
+    {
+      "id": "wrong_handoff_location",
+      "title": "Tomorrow 09:30 follow-up - SYNTHETIC",
+      "needs": [
+        {
+          "id": "OUT",
+          "slot": "outbound",
+          "seq": 0,
+          "start": 510,
+          "end": 550,
+          "origin": "HOME",
+          "destination": "CLINIC",
+          "capability": "DRIVE"
+        },
+        {
+          "id": "ESC",
+          "slot": "escort",
+          "seq": 1,
+          "start": 555,
+          "end": 630,
+          "origin": "STATION",
+          "destination": "CLINIC",
+          "capability": "ESCORT"
+        },
+        {
+          "id": "RET",
+          "slot": "return",
+          "seq": 2,
+          "start": 645,
+          "end": 690,
+          "origin": "CLINIC",
+          "destination": "HOME",
+          "capability": "DRIVE"
+        }
+      ],
+      "people": [
+        {
+          "id": "SOF",
+          "name": "Sofia",
+          "capabilities": [
+            "DRIVE",
+            "ESCORT"
+          ],
+          "availability": [
+            [
+              480,
+              720
+            ]
+          ],
+          "busy": []
+        },
+        {
+          "id": "OMA",
+          "name": "Omar",
+          "capabilities": [
+            "DRIVE"
+          ],
+          "availability": [
+            [
+              480,
+              600
+            ],
+            [
+              630,
+              720
+            ]
+          ],
+          "busy": []
+        },
+        {
+          "id": "LIN",
+          "name": "Lina",
+          "capabilities": [
+            "ESCORT"
+          ],
+          "availability": [
+            [
+              540,
+              650
+            ]
+          ],
+          "busy": []
+        },
+        {
+          "id": "CEL",
+          "name": "Celine",
+          "capabilities": [
+            "DRIVE"
+          ],
+          "availability": [
+            [
+              630,
+              720
+            ]
+          ],
+          "busy": []
+        }
+      ],
+      "offers": [
+        {
+          "id": "SOUT",
+          "person": "SOF",
+          "need": "OUT",
+          "state": "withdrawn"
+        },
+        {
+          "id": "SESC",
+          "person": "SOF",
+          "need": "ESC",
+          "state": "withdrawn"
+        },
+        {
+          "id": "SRET",
+          "person": "SOF",
+          "need": "RET",
+          "state": "withdrawn"
+        },
+        {
+          "id": "OOUT",
+          "person": "OMA",
+          "need": "OUT",
+          "state": "confirmed"
+        },
+        {
+          "id": "LESC",
+          "person": "LIN",
+          "need": "ESC",
+          "state": "confirmed"
+        },
+        {
+          "id": "CRET",
+          "person": "CEL",
+          "need": "RET",
+          "state": "confirmed"
+        }
+      ],
+      "expected_covered": false,
+      "purpose": "Outbound finishes at clinic, escort starts somewhere else."
+    },
+    {
+      "id": "helper_cancelled",
+      "title": "Tomorrow 09:30 follow-up - SYNTHETIC",
+      "needs": [
+        {
+          "id": "OUT",
+          "slot": "outbound",
+          "seq": 0,
+          "start": 510,
+          "end": 550,
+          "origin": "HOME",
+          "destination": "CLINIC",
+          "capability": "DRIVE"
+        },
+        {
+          "id": "ESC",
+          "slot": "escort",
+          "seq": 1,
+          "start": 555,
+          "end": 630,
+          "origin": "CLINIC",
+          "destination": "CLINIC",
+          "capability": "ESCORT"
+        },
+        {
+          "id": "RET",
+          "slot": "return",
+          "seq": 2,
+          "start": 645,
+          "end": 690,
+          "origin": "CLINIC",
+          "destination": "HOME",
+          "capability": "DRIVE"
+        }
+      ],
+      "people": [
+        {
+          "id": "SOF",
+          "name": "Sofia",
+          "capabilities": [
+            "DRIVE",
+            "ESCORT"
+          ],
+          "availability": [
+            [
+              480,
+              720
+            ]
+          ],
+          "busy": []
+        },
+        {
+          "id": "OMA",
+          "name": "Omar",
+          "capabilities": [
+            "DRIVE"
+          ],
+          "availability": [
+            [
+              480,
+              600
+            ],
+            [
+              630,
+              720
+            ]
+          ],
+          "busy": []
+        },
+        {
+          "id": "LIN",
+          "name": "Lina",
+          "capabilities": [
+            "ESCORT"
+          ],
+          "availability": [
+            [
+              540,
+              650
+            ]
+          ],
+          "busy": [],
+          "cancelled": true
+        },
+        {
+          "id": "CEL",
+          "name": "Celine",
+          "capabilities": [
+            "DRIVE"
+          ],
+          "availability": [
+            [
+              630,
+              720
+            ]
+          ],
+          "busy": []
+        }
+      ],
+      "offers": [
+        {
+          "id": "SOUT",
+          "person": "SOF",
+          "need": "OUT",
+          "state": "withdrawn"
+        },
+        {
+          "id": "SESC",
+          "person": "SOF",
+          "need": "ESC",
+          "state": "withdrawn"
+        },
+        {
+          "id": "SRET",
+          "person": "SOF",
+          "need": "RET",
+          "state": "withdrawn"
+        },
+        {
+          "id": "OOUT",
+          "person": "OMA",
+          "need": "OUT",
+          "state": "confirmed"
+        },
+        {
+          "id": "LESC",
+          "person": "LIN",
+          "need": "ESC",
+          "state": "confirmed"
+        },
+        {
+          "id": "CRET",
+          "person": "CEL",
+          "need": "RET",
+          "state": "confirmed"
+        }
+      ],
+      "expected_covered": false,
+      "purpose": "Lina cancellation invalidates otherwise confirmed escort."
+    },
+    {
+      "id": "availability_short",
+      "title": "Tomorrow 09:30 follow-up - SYNTHETIC",
+      "needs": [
+        {
+          "id": "OUT",
+          "slot": "outbound",
+          "seq": 0,
+          "start": 510,
+          "end": 550,
+          "origin": "HOME",
+          "destination": "CLINIC",
+          "capability": "DRIVE"
+        },
+        {
+          "id": "ESC",
+          "slot": "escort",
+          "seq": 1,
+          "start": 555,
+          "end": 630,
+          "origin": "CLINIC",
+          "destination": "CLINIC",
+          "capability": "ESCORT"
+        },
+        {
+          "id": "RET",
+          "slot": "return",
+          "seq": 2,
+          "start": 645,
+          "end": 690,
+          "origin": "CLINIC",
+          "destination": "HOME",
+          "capability": "DRIVE"
+        }
+      ],
+      "people": [
+        {
+          "id": "SOF",
+          "name": "Sofia",
+          "capabilities": [
+            "DRIVE",
+            "ESCORT"
+          ],
+          "availability": [
+            [
+              480,
+              720
+            ]
+          ],
+          "busy": []
+        },
+        {
+          "id": "OMA",
+          "name": "Omar",
+          "capabilities": [
+            "DRIVE"
+          ],
+          "availability": [
+            [
+              480,
+              530
+            ]
+          ],
+          "busy": []
+        },
+        {
+          "id": "LIN",
+          "name": "Lina",
+          "capabilities": [
+            "ESCORT"
+          ],
+          "availability": [
+            [
+              540,
+              650
+            ]
+          ],
+          "busy": []
+        },
+        {
+          "id": "CEL",
+          "name": "Celine",
+          "capabilities": [
+            "DRIVE"
+          ],
+          "availability": [
+            [
+              630,
+              720
+            ]
+          ],
+          "busy": []
+        }
+      ],
+      "offers": [
+        {
+          "id": "SOUT",
+          "person": "SOF",
+          "need": "OUT",
+          "state": "withdrawn"
+        },
+        {
+          "id": "SESC",
+          "person": "SOF",
+          "need": "ESC",
+          "state": "withdrawn"
+        },
+        {
+          "id": "SRET",
+          "person": "SOF",
+          "need": "RET",
+          "state": "withdrawn"
+        },
+        {
+          "id": "OOUT",
+          "person": "OMA",
+          "need": "OUT",
+          "state": "confirmed"
+        },
+        {
+          "id": "LESC",
+          "person": "LIN",
+          "need": "ESC",
+          "state": "confirmed"
+        },
+        {
+          "id": "CRET",
+          "person": "CEL",
+          "need": "RET",
+          "state": "confirmed"
+        }
+      ],
+      "expected_covered": false,
+      "purpose": "Omar availability ends before the outward trip is complete."
+    },
+    {
+      "id": "unconfirmed_return",
+      "title": "Tomorrow 09:30 follow-up - SYNTHETIC",
+      "needs": [
+        {
+          "id": "OUT",
+          "slot": "outbound",
+          "seq": 0,
+          "start": 510,
+          "end": 550,
+          "origin": "HOME",
+          "destination": "CLINIC",
+          "capability": "DRIVE"
+        },
+        {
+          "id": "ESC",
+          "slot": "escort",
+          "seq": 1,
+          "start": 555,
+          "end": 630,
+          "origin": "CLINIC",
+          "destination": "CLINIC",
+          "capability": "ESCORT"
+        },
+        {
+          "id": "RET",
+          "slot": "return",
+          "seq": 2,
+          "start": 645,
+          "end": 690,
+          "origin": "CLINIC",
+          "destination": "HOME",
+          "capability": "DRIVE"
+        }
+      ],
+      "people": [
+        {
+          "id": "SOF",
+          "name": "Sofia",
+          "capabilities": [
+            "DRIVE",
+            "ESCORT"
+          ],
+          "availability": [
+            [
+              480,
+              720
+            ]
+          ],
+          "busy": []
+        },
+        {
+          "id": "OMA",
+          "name": "Omar",
+          "capabilities": [
+            "DRIVE"
+          ],
+          "availability": [
+            [
+              480,
+              600
+            ],
+            [
+              630,
+              720
+            ]
+          ],
+          "busy": []
+        },
+        {
+          "id": "LIN",
+          "name": "Lina",
+          "capabilities": [
+            "ESCORT"
+          ],
+          "availability": [
+            [
+              540,
+              650
+            ]
+          ],
+          "busy": []
+        },
+        {
+          "id": "CEL",
+          "name": "Celine",
+          "capabilities": [
+            "DRIVE"
+          ],
+          "availability": [
+            [
+              630,
+              720
+            ]
+          ],
+          "busy": []
+        }
+      ],
+      "offers": [
+        {
+          "id": "SOUT",
+          "person": "SOF",
+          "need": "OUT",
+          "state": "withdrawn"
+        },
+        {
+          "id": "SESC",
+          "person": "SOF",
+          "need": "ESC",
+          "state": "withdrawn"
+        },
+        {
+          "id": "SRET",
+          "person": "SOF",
+          "need": "RET",
+          "state": "withdrawn"
+        },
+        {
+          "id": "OOUT",
+          "person": "OMA",
+          "need": "OUT",
+          "state": "confirmed"
+        },
+        {
+          "id": "LESC",
+          "person": "LIN",
+          "need": "ESC",
+          "state": "confirmed"
+        },
+        {
+          "id": "CRET",
+          "person": "CEL",
+          "need": "RET",
+          "state": "proposed"
+        }
+      ],
+      "expected_covered": false,
+      "purpose": "Celine explicitly changed return confirmation to proposed."
+    }
+  ]
+}

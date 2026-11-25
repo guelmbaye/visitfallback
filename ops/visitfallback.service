@@ -1,0 +1,24 @@
+[Unit]
+Description=VisitFallback synthetic Relate demo — isolated browser sessions
+After=network.target
+
+[Service]
+Type=simple
+User=REPLACE_WITH_PLESK_SYSTEM_USER
+Group=REPLACE_WITH_PLESK_SYSTEM_GROUP
+WorkingDirectory=REPLACE_WITH_ABSOLUTE_PROJECT_PATH
+Environment=PYTHONUNBUFFERED=1
+RuntimeDirectory=visitfallback
+RuntimeDirectoryMode=0700
+ExecStart=REPLACE_WITH_ABSOLUTE_PROJECT_PATH/.venv/bin/python -m visitfallback.public_webapp --store-dir /run/visitfallback/stores --data data/scenarios.json --host 127.0.0.1 --port 8766 --max-sessions 24 --idle-minutes 30 --origin https://visitfallback.e-ntsi.com
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=false
+ReadWritePaths=/run/visitfallback
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target
